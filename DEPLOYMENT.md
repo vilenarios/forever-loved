@@ -40,7 +40,7 @@ PROXY_URL=http://user:pass@gate.decodo.com:7000
 ARWEAVE_KEYFILE_PATH=./arweave-keyfile.json
 
 # Server Configuration
-PORT=3000
+PORT=3420
 NODE_ENV=production
 
 # CORS (adjust for your frontend domain)
@@ -73,7 +73,7 @@ docker-compose ps
 
 ```bash
 # Test health endpoint
-curl http://localhost:3000/health
+curl http://localhost:3420/health
 
 # Expected response: {"status":"ok"}
 ```
@@ -90,7 +90,7 @@ server {
     server_name api.foreverloved.dev;
 
     location / {
-        proxy_pass http://localhost:3000;
+        proxy_pass http://localhost:3420;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';

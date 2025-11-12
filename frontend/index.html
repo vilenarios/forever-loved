@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever Loved - Make Your Build Forever Loved</title>
+    <meta name="description" content="Permanently preserve your Lovable projects on the Permanent Cloud. Free archival service backed by Arweave.">
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+</head>
+<body>
+    <!-- Main Container -->
+    <main class="app-container">
+        <!-- Logo Header -->
+        <header class="logo-header">
+            <img src="/src/assets/images/forever_loved_header_logo.png" alt="Forever Loved" class="header-logo-image">
+        </header>
+        <!-- SVG Filters -->
+        <svg style="position: absolute; width: 0; height: 0;">
+            <defs>
+                <filter id="noiseFilter">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/>
+                    <feColorMatrix type="saturate" values="0"/>
+                    <feComponentTransfer>
+                        <feFuncA type="discrete" tableValues="0 0.25"/>
+                    </feComponentTransfer>
+                    <feBlend mode="overlay" in2="SourceGraphic"/>
+                </filter>
+            </defs>
+        </svg>
+
+        <!-- Hero Section (Home State) -->
+        <section id="heroSection" class="hero-section">
+            <div class="hero-background">
+                <div class="gradient-layer-2"></div>
+                <div class="noise-layer"></div>
+                <div class="light-effects">
+                    <div class="polygon-glow polygon-1"></div>
+                    <div class="polygon-glow polygon-2"></div>
+                    <div class="polygon-glow polygon-3"></div>
+                </div>
+                <div class="snow-effects">
+                    <img src="/src/assets/images/ice-cream.gif" class="snow snow-1" alt="">
+                    <img src="/src/assets/images/ice-cream.gif" class="snow snow-2" alt="">
+                    <img src="/src/assets/images/ice-cream.gif" class="snow snow-3" alt="">
+                    <img src="/src/assets/images/ice-cream.gif" class="snow snow-4" alt="">
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-text-container">
+                    <h1 class="hero-title">Hey Builder.<br>Make your build<br>forever loved.</h1>
+
+                    <div class="hero-description">
+                        <p>You spent hours shaping it — now give it some foreverness. Paste your Lovable project link and press Forever. We'll store it on the Permanent Cloud so your work never disappears.</p>
+
+                        <div class="feature-pills">
+                            <span class="pill">Subscription-free</span>
+                            <span class="pill">Permanent</span>
+                            <span class="pill">Decentralized</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="archiveForm" class="archive-form">
+                    <input
+                        type="url"
+                        id="projectUrl"
+                        placeholder="https://your-project.lovable.app"
+                        required
+                        autocomplete="url"
+                    >
+                    <button type="submit" class="forever-btn" id="foreverBtn">
+                        <span>Forever</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>Scroll down</span>
+                <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="#00FF15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Done Section (Success State - Hidden by default) -->
+        <section id="doneSection" class="done-section" style="display: none;">
+            <div class="hero-background">
+                <div class="gradient-layer-2"></div>
+                <div class="noise-layer"></div>
+                <div class="light-effects">
+                    <div class="polygon-glow polygon-1"></div>
+                    <div class="polygon-glow polygon-2"></div>
+                    <div class="polygon-glow polygon-3"></div>
+                </div>
+                <div class="snow-effects">
+                    <img src="/src/assets/images/ice-cream.gif" class="snow snow-1" alt="">
+                    <img src="/src/assets/images/ice-cream.gif" class="snow snow-2" alt="">
+                    <img src="/src/assets/images/ice-cream.gif" class="snow snow-3" alt="">
+                    <img src="/src/assets/images/ice-cream.gif" class="snow snow-4" alt="">
+                </div>
+            </div>
+
+            <div class="done-content">
+                <h2 class="done-title">Done!</h2>
+
+                <div class="result-container">
+                    <p class="result-description">Your project is now safely stored forever — and this is its new home:</p>
+
+                    <a class="url-display-container" id="archivedUrlLink" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">
+                        <div class="url-display" id="archivedUrl">https://lorem-ipsum.dolores/324152</div>
+                    </a>
+
+                    <div class="result-actions">
+                        <button class="link-btn" id="viewSiteBtn">Copy link</button>
+                        <button class="link-btn" id="reArchiveBtn">Re-archive</button>
+                    </div>
+                </div>
+
+                <div class="done-info">
+                    <p>No domain to register. No credit card required. No renewal reminders.<br>Just a permanent home for your work.</p>
+
+                    <div class="done-actions">
+                        <button class="link-btn" id="newProjectBtn">Store another project</button>
+                        <button class="link-btn" id="shareBtn">Share with friends</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>Scroll down</span>
+                <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="#00FF15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works-section">
+            <div class="how-it-works-content">
+                <div class="how-it-works-text">
+                    <h2 class="section-title">Forever Loved is a simple way to make sure the work you publish online never disappears.</h2>
+
+                    <p class="section-description">
+                        When you archive a project, it's hosted on the AR.IO Network, a Permanent Cloud designed for long-term, decentralized data storage and access, built on the Arweave blockchain. You can see it as the internet of permanent pages. Files are distributed across hundreds of independent nodes instead of a single server, which means they can't be lost to expired domains, forgotten passwords, or a cloud provider going offline. The system uses a one-time payment model rather than monthly subscriptions, so your work stays accessible no matter what.
+                    </p>
+
+                    <p class="section-description">
+                        For builders using Lovable, this service is currently free; a small thank-you from the Arweave ecosystem to every builder shaping and keeping the internet alive.
+                    </p>
+                </div>
+
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-icon">
+                            <img src="/src/assets/images/lovable_logo.png" alt="Lovable" class="lovable-logo">
+                        </div>
+                        <p class="step-text">Create and publish your build on Lovable.</p>
+                    </div>
+
+                    <div class="step-divider"></div>
+
+                    <div class="step">
+                        <button class="forever-btn-small">
+                            <span>Forever</span>
+                        </button>
+                        <p class="step-text">Paste your Lovable build URL and press "Forever".</p>
+                    </div>
+
+                    <div class="step-divider"></div>
+
+                    <div class="step">
+                        <div class="infinity-icon">
+                            <img src="/src/assets/images/forever_loved_main_icon.png" alt="Forever Loved Icon" class="forever-loved-main-icon">
+                        </div>
+                        <p class="step-text">Your build is now part of infinity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-divider"></div>
+
+            <div class="footer-content">
+                <h3 class="footer-title">
+                    Keep your work alive. Make it
+                    <span class="footer-logo">
+                        <span class="forever-text">Forever</span>
+                        <img src="/src/assets/images/forever_loved_footer_icon.png" alt="Forever Loved" class="infinity-small">
+                        <span class="loved-text">Loved</span>
+                    </span>
+                </h3>
+
+                <p class="footer-description">
+                    Powered by <a href="https://turbo.ar.io/" target="_blank" rel="noopener noreferrer" class="footer-link">ArDrive Turbo</a> - the fastest way to host apps on the Permanent Cloud.<br>
+                    Built by builders, for builders.
+                </p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="loading-content">
+            <div class="spinner-large"></div>
+            <p class="loading-text">Archiving your project...</p>
+            <p class="loading-subtext">This may take a few minutes</p>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

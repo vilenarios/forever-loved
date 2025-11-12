@@ -1,0 +1,35 @@
+{
+  "name": "foreverloved-backend",
+  "version": "1.0.0",
+  "description": "Forever Loved - Backend API for archiving Lovable projects to Arweave",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "arweave",
+    "archive",
+    "lovable",
+    "permaweb"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@ar.io/sdk": "^3.21.0",
+    "@ardrive/turbo-sdk": "^1.18.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.0",
+    "express-rate-limit": "^8.2.1",
+    "puppeteer": "^24.29.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

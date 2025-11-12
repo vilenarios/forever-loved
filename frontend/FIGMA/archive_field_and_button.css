@@ -1,0 +1,126 @@
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px;
+gap: 16px;
+
+width: 522px;
+height: 96px;
+
+background: rgba(20, 27, 24, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 1 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 24px;
+gap: 8px;
+
+width: 316px;
+height: 64px;
+
+/* Whiteish */
+background: #DCECDD;
+/* Blackish */
+border: 2px solid #141B18;
+backdrop-filter: blur(15px);
+/* Note: backdrop-filter has minimal browser support */
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* https://your-project.lovable.app */
+
+width: 216px;
+height: 106px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 106px;
+/* identical to box height, or 660% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Blackish */
+color: #141B18;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Group 10 */
+
+width: 158px;
+height: 64px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Rectangle 3 */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Green 1 */
+background: #00FF15;
+/* Blackish */
+border-width: 2px 6px 6px 2px;
+border-style: solid;
+border-color: #141B18;
+box-shadow: inset 1.6px 1.6px 1.6px #FFFFFF;
+
+
+/* Forever */
+
+position: absolute;
+width: 160px;
+left: calc(50% - 160px/2 + 0.8px);
+top: 22.75%;
+bottom: 25.49%;
+
+font-family: 'Advercase Demo';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 120%;
+/* or 29px */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.04em;
+
+/* Blackish */
+color: #141B18;
+

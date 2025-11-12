@@ -1,0 +1,577 @@
+/* Group 15 */
+
+position: absolute;
+width: 343px;
+height: 500px;
+left: calc(50% - 343px/2);
+top: 100px;
+
+
+
+/* Mask group */
+
+position: absolute;
+width: 343px;
+height: 500px;
+left: calc(50% - 343px/2);
+top: 100px;
+
+
+
+/* Rectangle 6 */
+
+position: absolute;
+width: 343px;
+height: 500px;
+left: calc(50% - 343px/2);
+top: 100px;
+
+background: linear-gradient(180deg, #D9D9D9 83.66%, rgba(115, 115, 115, 0) 100%);
+border-radius: 16px;
+
+
+/* Rectangle 5 */
+
+position: absolute;
+width: 343px;
+height: 500px;
+left: calc(50% - 343px/2);
+top: 100px;
+
+background: linear-gradient(180deg, #691E85 0%, rgba(43, 33, 146, 0.75) 50%, rgba(20, 27, 24, 0) 100%);
+
+
+/* Mask group */
+
+position: absolute;
+width: 342.8px;
+height: 490.53px;
+left: 16.2px;
+top: 100px;
+
+
+
+/* Rectangle 7 */
+
+position: absolute;
+width: 342.8px;
+height: 490.53px;
+left: calc(50% - 342.8px/2 + 0.1px);
+top: 100px;
+
+background: linear-gradient(180deg, #D9D9D9 89.43%, rgba(20, 27, 24, 0) 100%);
+
+
+/* Group 15 */
+
+position: absolute;
+width: 133.68px;
+height: 689.47px;
+left: 120.56px;
+top: -231.05px;
+
+
+
+/* Group 1 */
+
+position: absolute;
+width: 133.68px;
+height: 689.47px;
+left: 120.56px;
+top: -231.05px;
+
+opacity: 0.8;
+
+
+/* Polygon 2 */
+
+position: absolute;
+width: 114.27px;
+height: 563.68px;
+left: calc(50% - 114.27px/2 - 0.1px);
+top: -105.26px;
+
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 58.23%, rgba(255, 255, 255, 0.15) 97.08%);
+opacity: 0.5;
+filter: blur(75px);
+
+
+/* Polygon 4 */
+
+position: absolute;
+width: 133.68px;
+height: 689.47px;
+left: calc(50% - 133.68px/2 - 0.1px);
+top: -231.05px;
+
+background: linear-gradient(180deg, rgba(237, 210, 255, 0.375) 34.2%, rgba(255, 255, 255, 0.3) 100%);
+mix-blend-mode: overlay;
+filter: blur(72px);
+
+
+/* Polygon 5 */
+
+position: absolute;
+width: 40.45px;
+height: 448.42px;
+left: calc(50% - 40.45px/2 - 0px);
+top: 1.58px;
+
+background: linear-gradient(180deg, #EDD2FF 18.81%, rgba(255, 255, 255, 0.5) 95.53%);
+mix-blend-mode: overlay;
+filter: blur(72px);
+
+
+/* Christmas Snow GIF by Luicella's Ice Cream 1 */
+
+position: absolute;
+width: 57.87px;
+height: 102.88px;
+left: calc(50% - 57.87px/2 - 0.14px);
+top: 97.68px;
+
+background: url(Christmas Snow GIF by Luicella's Ice Cream.png);
+mix-blend-mode: color-dodge;
+opacity: 0.75;
+transform: rotate(-180deg);
+
+
+/* Christmas Snow GIF by Luicella's Ice Cream 3 */
+
+position: absolute;
+width: 57.87px;
+height: 102.88px;
+left: calc(50% - 57.87px/2 - 19.43px);
+top: 290.87px;
+
+background: url(Christmas Snow GIF by Luicella's Ice Cream.png);
+mix-blend-mode: color-dodge;
+opacity: 0.65;
+transform: rotate(-166.65deg);
+
+
+/* Christmas Snow GIF by Luicella's Ice Cream 4 */
+
+position: absolute;
+width: 56.62px;
+height: 100.66px;
+left: calc(50% - 56.62px/2 - 17.44px);
+top: 289.41px;
+
+background: url(Christmas Snow GIF by Luicella's Ice Cream.png);
+mix-blend-mode: color-dodge;
+opacity: 0.65;
+transform: rotate(157.12deg);
+
+
+/* Christmas Snow GIF by Luicella's Ice Cream 2 */
+
+position: absolute;
+width: 82.22px;
+height: 146.16px;
+left: calc(50% - 82.22px/2 - 0.2px);
+top: 259.02px;
+
+background: url(Christmas Snow GIF by Luicella's Ice Cream.png);
+mix-blend-mode: color-dodge;
+opacity: 0.6;
+transform: rotate(-180deg);
+
+
+/* Frame 47 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 343px;
+height: 492px;
+left: 16px;
+top: 164px;
+
+
+
+/* Frame 5 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px 16px;
+gap: 16px;
+
+width: 343px;
+height: 306px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Hey Builder. Make your build forever loved. */
+
+width: 302px;
+height: 144px;
+
+font-family: 'Advercase Demo';
+font-style: normal;
+font-weight: 700;
+font-size: 42px;
+line-height: 114%;
+/* or 48px */
+text-align: center;
+
+/* Green 1 */
+color: #00FF15;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 16 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 311px;
+height: 146px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* You spent hours shaping it — now give it some foreverness. Paste your Lovable project link and press Forever. We’ll store it on the Permaweb so your work never disappears. */
+
+width: 311px;
+height: 110px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Whiteish */
+color: #DCECDD;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 23 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+width: 307px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 15 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 2px 10px;
+gap: 8px;
+
+width: 90px;
+height: 20px;
+
+background: rgba(0, 0, 0, 0.3);
+border: 1px solid rgba(255, 255, 255, 0.25);
+border-radius: 200px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Subscription-free */
+
+width: 70px;
+height: 16px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 130%;
+/* identical to box height, or 16px */
+text-align: center;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+
+/* Whiteish */
+color: #DCECDD;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 16 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 2px 10px;
+gap: 8px;
+
+width: 115px;
+height: 20px;
+
+background: rgba(0, 0, 0, 0.3);
+border: 1px solid rgba(255, 255, 255, 0.25);
+border-radius: 200px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Decentralized */
+
+width: 95px;
+height: 16px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 130%;
+/* identical to box height, or 16px */
+text-align: center;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+
+/* Whiteish */
+color: #DCECDD;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 17 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 2px 10px;
+gap: 8px;
+
+width: 86px;
+height: 20px;
+
+background: rgba(0, 0, 0, 0.3);
+border: 1px solid rgba(255, 255, 255, 0.25);
+border-radius: 200px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Permaweb */
+
+width: 66px;
+height: 16px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 130%;
+/* identical to box height, or 16px */
+text-align: center;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+
+/* Whiteish */
+color: #DCECDD;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 16px;
+gap: 16px;
+
+width: 343px;
+height: 176px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 24px;
+gap: 8px;
+
+width: 311px;
+height: 64px;
+
+/* Whiteish */
+background: #DCECDD;
+/* Blackish */
+border: 2px solid #141B18;
+backdrop-filter: blur(15px);
+/* Note: backdrop-filter has minimal browser support */
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* https://your-project.lovable.app */
+
+width: 216px;
+height: 106px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 106px;
+/* identical to box height, or 660% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Blackish */
+color: #141B18;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Group 10 */
+
+width: 158px;
+height: 64px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Rectangle 3 */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Green 1 */
+background: #00FF15;
+/* Blackish */
+border-width: 2px 6px 6px 2px;
+border-style: solid;
+border-color: #141B18;
+box-shadow: inset 1.6px 1.6px 1.6px #FFFFFF;
+
+
+/* Forever */
+
+position: absolute;
+width: 160px;
+left: calc(50% - 160px/2 + 0.8px);
+top: 22.75%;
+bottom: 25.49%;
+
+font-family: 'Advercase Demo';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 120%;
+/* or 29px */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.04em;
+
+/* Blackish */
+color: #141B18;
+

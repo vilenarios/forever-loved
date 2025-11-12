@@ -1,0 +1,17 @@
+{
+  "name": "foreverloved-frontend",
+  "version": "1.0.0",
+  "description": "Forever Loved - Frontend for archiving Lovable projects to Arweave",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": ["arweave", "archive", "lovable", "permaweb"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

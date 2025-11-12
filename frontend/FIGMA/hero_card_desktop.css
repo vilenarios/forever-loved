@@ -1,0 +1,627 @@
+/* Group 14 */
+
+position: absolute;
+width: 1696px;
+height: 950px;
+left: calc(50% - 1696px/2);
+top: 54px;
+
+
+
+/* Mask group */
+
+position: absolute;
+width: 1696px;
+height: 950px;
+left: calc(50% - 1696px/2);
+top: 54px;
+
+
+
+/* Rectangle 6 */
+
+position: absolute;
+width: 1696px;
+height: 950px;
+left: calc(50% - 1696px/2);
+top: 54px;
+
+background: linear-gradient(180deg, #D9D9D9 83.66%, rgba(115, 115, 115, 0) 100%);
+border-radius: 16px;
+
+
+/* Rectangle 5 */
+
+position: absolute;
+width: 1696px;
+height: 950px;
+left: calc(50% - 1696px/2);
+top: calc(50% - 950px/2 - 549.5px);
+
+background: linear-gradient(180deg, #691E85 0%, rgba(43, 33, 146, 0.75) 50%, rgba(20, 27, 24, 0) 100%);
+
+
+/* Mask group */
+
+position: absolute;
+width: 1695px;
+height: 932px;
+left: 17px;
+top: 54px;
+
+
+
+/* Rectangle 7 */
+
+position: absolute;
+width: 1695px;
+height: 932px;
+left: calc(50% - 1695px/2 + 0.5px);
+top: 54px;
+
+background: linear-gradient(180deg, #D9D9D9 89.43%, rgba(20, 27, 24, 0) 100%);
+
+
+/* Group 15 */
+
+position: absolute;
+width: 661px;
+height: 1310px;
+left: 533px;
+top: -575px;
+
+
+
+/* Group 1 */
+
+position: absolute;
+width: 661px;
+height: 1310px;
+left: 533px;
+top: -575px;
+
+opacity: 0.8;
+
+
+/* Polygon 2 */
+
+position: absolute;
+width: 565px;
+height: 1071px;
+left: calc(50% - 565px/2 - 0.5px);
+top: -336px;
+
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 58.23%, rgba(255, 255, 255, 0.15) 97.08%);
+opacity: 0.5;
+filter: blur(75px);
+
+
+/* Polygon 4 */
+
+position: absolute;
+width: 661px;
+height: 1310px;
+left: calc(50% - 661px/2 - 0.5px);
+top: -575px;
+
+background: linear-gradient(180deg, rgba(237, 210, 255, 0.375) 34.2%, rgba(255, 255, 255, 0.3) 100%);
+mix-blend-mode: overlay;
+filter: blur(72px);
+
+
+/* Polygon 5 */
+
+position: absolute;
+width: 200px;
+height: 852px;
+left: calc(50% - 200px/2);
+top: -133px;
+
+background: linear-gradient(180deg, #EDD2FF 18.81%, rgba(255, 255, 255, 0.5) 95.53%);
+mix-blend-mode: overlay;
+filter: blur(72px);
+
+
+/* Christmas Snow GIF by Luicella's Ice Cream 1 */
+
+position: absolute;
+width: 177px;
+height: 316px;
+left: calc(50% - 177px/2 - 0.5px);
+top: -11px;
+
+background: url(Christmas Snow GIF by Luicella's Ice Cream.png);
+mix-blend-mode: color-dodge;
+opacity: 0.75;
+transform: rotate(-180deg);
+
+
+/* Christmas Snow GIF by Luicella's Ice Cream 3 */
+
+position: absolute;
+width: 177px;
+height: 316px;
+left: calc(50% - 177px/2 - 174.5px);
+top: 350px;
+
+background: url(Christmas Snow GIF by Luicella's Ice Cream.png);
+mix-blend-mode: color-dodge;
+opacity: 0.65;
+transform: rotate(-166.65deg);
+
+
+/* Christmas Snow GIF by Luicella's Ice Cream 4 */
+
+position: absolute;
+width: 177px;
+height: 316px;
+left: calc(50% - 177px/2 + 61.14px);
+top: 344.19px;
+
+background: url(Christmas Snow GIF by Luicella's Ice Cream.png);
+mix-blend-mode: color-dodge;
+opacity: 0.65;
+transform: rotate(157.12deg);
+
+
+/* Christmas Snow GIF by Luicella's Ice Cream 2 */
+
+position: absolute;
+width: 252px;
+height: 448px;
+left: calc(50% - 252px/2 - 1px);
+top: 271px;
+
+background: url(Christmas Snow GIF by Luicella's Ice Cream.png);
+mix-blend-mode: color-dodge;
+opacity: 0.6;
+transform: rotate(-180deg);
+
+
+/* Frame 10 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+position: absolute;
+width: 82px;
+height: 51px;
+left: calc(50% - 82px/2);
+bottom: 1185px;
+
+
+
+/* Scroll down */
+
+width: 82px;
+height: 19px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 120%;
+/* or 19px */
+text-align: center;
+
+/* Green 1 */
+color: #00FF15;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* iconoir:maps-arrow */
+
+width: 24px;
+height: 24px;
+
+transform: rotate(-180deg);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 15.09%;
+right: 15.09%;
+top: 18.63%;
+bottom: 18.84%;
+
+/* Green 1 */
+border: 1.5px solid #00FF15;
+transform: rotate(-180deg);
+
+
+/* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 32px;
+gap: 32px;
+
+position: absolute;
+width: 600px;
+height: 444px;
+left: calc(50% - 600px/2);
+top: calc(50% - 444px/2 - 597px);
+
+
+
+/* Done! */
+
+width: 536px;
+height: 68px;
+
+font-family: 'Advercase Demo';
+font-style: normal;
+font-weight: 700;
+font-size: 60px;
+line-height: 114%;
+/* or 68px */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Green 1 */
+color: #00FF15;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 39 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 32px;
+
+width: 536px;
+height: 151px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 37 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 536px;
+height: 151px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Your project is now safely stored forever — and this is its new home: */
+
+width: 536px;
+height: 22px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Whiteish */
+color: #DCECDD;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 38 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+
+width: 372px;
+height: 60px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 36 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 32px;
+gap: 8px;
+
+width: 372px;
+height: 60px;
+
+background: rgba(20, 27, 24, 0.5);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* https://lorem-ipsum.dolores/324152 */
+
+width: 308px;
+height: 28px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 140%;
+/* identical to box height, or 28px */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Whiteish */
+color: #DCECDD;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 40 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 16px;
+gap: 8px;
+
+width: 95px;
+height: 37px;
+
+background: rgba(220, 236, 221, 0.1);
+border-radius: 48px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* How it works */
+
+width: 63px;
+height: 21px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 130%;
+/* identical to box height, or 21px */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Green 1 */
+color: #00FF15;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 42 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 536px;
+height: 97px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* No domain to register. No credit card required. No renewal reminders. Just a permanent home for your work. */
+
+width: 536px;
+height: 44px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Whiteish */
+color: #DCECDD;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 41 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+
+width: 350px;
+height: 37px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 29 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 16px;
+gap: 8px;
+
+width: 178px;
+height: 37px;
+
+background: rgba(220, 236, 221, 0.1);
+border-radius: 48px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* How it works */
+
+width: 146px;
+height: 21px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 130%;
+/* identical to box height, or 21px */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Green 1 */
+color: #00FF15;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 40 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 16px;
+gap: 8px;
+
+width: 156px;
+height: 37px;
+
+background: rgba(220, 236, 221, 0.1);
+border-radius: 48px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* How it works */
+
+width: 124px;
+height: 21px;
+
+font-family: 'Inter Tight';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 130%;
+/* identical to box height, or 21px */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Green 1 */
+color: #00FF15;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;

@@ -1,9 +1,0 @@
-/* Rectangle 5 */
-
-position: absolute;
-width: 343px;
-height: 500px;
-left: calc(50% - 343px/2);
-top: 100px;
-
-background: linear-gradient(180deg, #691E85 0%, rgba(43, 33, 146, 0.75) 50%, rgba(20, 27, 24, 0) 100%);

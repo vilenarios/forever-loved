@@ -48,7 +48,7 @@ async function getANT() {
 
 /**
  * Sets an ArNS undername pointing to the given manifestId
- * Format: {projectID}_undertaker -> manifestId
+ * Format: {projectID}_forever-loved -> manifestId
  */
 async function setArNSUndername(projectID, manifestId) {
     // Skip if wallet isn't loaded

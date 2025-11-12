@@ -162,7 +162,7 @@ curl -X POST http://localhost:3000/archive \
 
 3. **ArNS Configuration** (Optional):
    - `ARNS_WALLET_PATH` - Path to ArNS wallet JSON file
-   - `ARNS_NAME` - Your ArNS name (default: "undertaker")
+   - `ARNS_NAME` - Your ArNS name (default: "forever-loved")
    - `ARNS_TTL` - TTL in seconds (default: 60; use 3600 for production)
 
 **Frontend Environment Variables (`frontend/.env`):**
@@ -228,7 +228,7 @@ All security features are enforced automatically - no configuration needed!
 - **`arweave.js`** - Arweave upload via Turbo SDK
   - `uploadFolderToArweave()` - Uploads folder and returns manifest ID
 - **`arns.js`** - ArNS undername assignment
-  - `setArNSUndername()` - Sets `{projectID}_undertaker.arweave.net`
+  - `setArNSUndername()` - Sets `{projectID}_forever-loved.arweave.net`
 
 ### Database (`backend/src/db/`)
 - `database.js` - SQLite operations
@@ -410,7 +410,7 @@ docker run -p 3000:3000 \
 3. Click "Forever." button
 4. Wait for archival (watch browser console and backend logs)
 5. Access archived project:
-   - ArNS URL: `https://{projectID}_undertaker.arweave.net`
+   - ArNS URL: `https://{projectID}_forever-loved.arweave.net`
    - Direct URL: `https://arweave.net/{manifestID}`
 
 ### Using API Directly
@@ -427,7 +427,7 @@ Response:
   "projectId": "your-project",
   "manifestId": "abc123...",
   "manifestUrl": "https://arweave.net/abc123...",
-  "arnsUrl": "https://your-project_undertaker.arweave.net",
+  "arnsUrl": "https://your-project_forever-loved.arweave.net",
   "arnsTxId": "xyz789..."
 }
 ```

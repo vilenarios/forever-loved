@@ -31,7 +31,7 @@ Forever Loved archives [Lovable.dev](https://lovable.dev) projects to [Arweave](
    Edit `backend/.env` and configure:
    - `PORT` - Backend server port (default: 3000)
    - `ARNS_WALLET_PATH` - Path to ArNS wallet (optional)
-   - `ARNS_NAME` - Your ArNS name (default: "undertaker")
+   - `ARNS_NAME` - Your ArNS name (default: "forever-loved")
    - `ARNS_TTL` - TTL in seconds (default: 60 for testing; 3600 for production)
 
 3. **Add Arweave keyfile:**

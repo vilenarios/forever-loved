@@ -32,7 +32,7 @@ const config = {
     arns: {
         walletPath: process.env.ARNS_WALLET_PATH || null,
         wallet: null, // Will be loaded lazily
-        name: process.env.ARNS_NAME || 'undertaker',
+        name: process.env.ARNS_NAME || 'forever-loved',
         ttl: parseInt(process.env.ARNS_TTL || '60', 10) // TTL in seconds
     },
 

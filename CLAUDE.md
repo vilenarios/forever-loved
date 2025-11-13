@@ -111,7 +111,7 @@ cp frontend/.env.example frontend/.env
 # Start both frontend and backend with hot-reload
 npm run dev
 # Frontend: http://localhost:5173
-# Backend:  http://localhost:3000
+# Backend:  http://localhost:3420
 
 # Or run separately:
 npm run dev:frontend  # Vite dev server
@@ -137,10 +137,10 @@ turbo upload-folder frontend/dist --index-file index.html
 
 ```bash
 # Health check
-curl http://localhost:3000/health
+curl http://localhost:3420/health
 
 # Test archival endpoint
-curl -X POST http://localhost:3000/archive \
+curl -X POST http://localhost:3420/archive \
   -H "Content-Type: application/json" \
   -d '{"url":"https://your-project.lovable.app/"}'
 ```
@@ -152,7 +152,7 @@ curl -X POST http://localhost:3000/archive \
 **Backend Environment Variables (`backend/.env`):**
 
 1. **Server Configuration**:
-   - `PORT` - Server port (default: 3000)
+   - `PORT` - Server port (default: 3420)
    - `NODE_ENV` - Environment (development/production)
    - `CORS_ORIGIN` - Allowed CORS origins (default: *)
 
@@ -169,7 +169,7 @@ curl -X POST http://localhost:3000/archive \
 
 1. **API Configuration**:
    - `VITE_API_URL` - Backend API URL
-   - Development: `http://localhost:3000`
+   - Development: `http://localhost:3420`
    - Production: Your ar.io gateway URL
 
 ### Database
@@ -187,7 +187,7 @@ curl -X POST http://localhost:3000/archive \
 
 ### Server Configuration
 
-- **Default Port**: 3000 (configurable via `PORT` environment variable)
+- **Default Port**: 3420 (configurable via `PORT` environment variable)
 - **Request Timeout**: 10 minutes maximum per request
 - **CORS**: Configurable via `CORS_ORIGIN` (default: `*`)
 - **Body Size Limit**: 10MB maximum request body
@@ -242,10 +242,11 @@ All security features are enforced automatically - no configuration needed!
 ## Important Constraints
 
 ### Scraping Configuration (`backend/src/config/config.js`)
-- **Homepage Timeout**: 5 seconds (wait for all initial chunks)
-- **Route Timeout**: 4 seconds (per route for lazy-loaded components)
-- **Final Timeout**: 5 seconds (after visiting all routes for final assets)
+- **Homepage Timeout**: 1000ms (minimal wait - networkidle0 handles actual waiting)
+- **Route Timeout**: 500ms (minimal wait per route - networkidle0 handles actual waiting)
+- **Final Timeout**: 0ms (no additional wait needed after all routes visited)
 - **Max Routes**: 50 (safety limit to prevent infinite scraping)
+- **Network Idle Strategy**: Uses Puppeteer's `networkidle0` for robust asset detection
 
 ### URL Validation
 - Accepts two formats (`backend/src/routes/archive.js`):
@@ -415,9 +416,15 @@ docker run -p 3000:3000 \
 
 ### Using API Directly
 ```bash
-curl -X POST http://localhost:3000/archive \
+# Standard archive request
+curl -X POST http://localhost:3420/archive \
   -H "Content-Type: application/json" \
   -d '{"url":"https://your-project.lovable.app/"}'
+
+# Force re-archive (bypass cache)
+curl -X POST http://localhost:3420/archive \
+  -H "Content-Type: application/json" \
+  -d '{"url":"https://your-project.lovable.app/?force=true"}'
 ```
 
 Response:
@@ -456,19 +463,23 @@ Response:
 
 ## Known Issues & Limitations
 
-### Cache Check Disabled
-**Location**: `backend/src/routes/archive.js:79-92`
+### Intelligent Caching with HTML Hash Comparison
+**Location**: `backend/src/routes/archive.js:96-140`
 
-The cache check is currently commented out with note "disabled for testing". This means:
-- Every request re-archives the project (costs Arweave upload fees)
-- No deduplication of identical projects
-- Slower response times
+The cache system uses HTML hash comparison to detect changes:
+- **First check**: Looks for existing archive in database
+- **Hash comparison**: Fetches current project HTML and compares hash with stored hash
+- **Smart re-archival**: Only re-archives if project HTML has changed
+- **Force re-archive**: Use `?force=true` query parameter to bypass cache
 
-**To re-enable caching**:
-Uncomment lines 79-92 in `backend/src/routes/archive.js`. The system will:
-1. Check database for existing manifestID
-2. Return cached URL immediately if found
-3. Only archive if not in database
+**Benefits**:
+- Saves Arweave upload fees by avoiding duplicate uploads
+- Faster response for unchanged projects (returns cached manifestID immediately)
+- Automatically detects and re-archives changed projects
+
+**Database schema includes**:
+- `html_hash` - SHA256 hash of project's main HTML for change detection
+- `arns_url` - Cached ArNS URL for quick retrieval
 
 ### Bug Fixes Applied
 - **Fixed**: Race condition in concurrent request limiter (could exceed limit with simultaneous requests)
@@ -476,6 +487,8 @@ Uncomment lines 79-92 in `backend/src/routes/archive.js`. The system will:
 - **Fixed**: Deprecated `page.waitForTimeout()` replaced with helper function
 - **Fixed**: Path traversal vulnerability with projectID sanitization
 - **Fixed**: Regex escaping in route discovery patterns
+- **Improved**: Scraping performance with optimized timeouts and networkidle0 strategy
+- **Added**: HTML hash-based caching to avoid duplicate uploads of unchanged projects
 
 ## Security Considerations
 
@@ -490,11 +503,10 @@ Uncomment lines 79-92 in `backend/src/routes/archive.js`. The system will:
 ⚠️ **No authentication** - Anyone can submit archive requests
 ⚠️ **No payment required** - Uses your Arweave wallet balance
 ⚠️ **Residential IP required** - Won't work from datacenter IPs (Lovable blocks them)
-⚠️ **Cache disabled by default** - Re-archives every request (consider enabling for production)
 
 **Future Improvements**:
 - Add authentication (x402 micropayments recommended)
-- Enable cache check for production
 - Add metrics/monitoring
 - Add archive size limits
 - Add user quota management
+- Add webhook notifications for archive completion

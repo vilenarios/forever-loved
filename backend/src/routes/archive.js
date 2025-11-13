@@ -54,10 +54,10 @@ const concurrentLimiter = async (req, res, next) => {
 };
 
 /**
- * POST /archive
+ * POST /
  * Main archival endpoint that validates, archives, and uploads Lovable projects
  */
-router.post('/archive', archiveRateLimiter, concurrentLimiter, async (req, res) => {
+router.post('/', archiveRateLimiter, concurrentLimiter, async (req, res) => {
     console.log('[Archive] Request received');
 
     const { url, force } = req.body;
@@ -186,10 +186,38 @@ router.post('/archive', archiveRateLimiter, concurrentLimiter, async (req, res) 
 
 /**
  * GET /health
- * Health check endpoint
+ * Health check endpoint with archive metrics
  */
-router.get('/health', (req, res) => {
-    res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });
+router.get('/health', async (req, res) => {
+    try {
+        const { getDatabaseStats } = require('../db/database');
+
+        // Get database stats
+        const dbStats = await getDatabaseStats();
+
+        res.status(200).json({
+            status: 'ok',
+            timestamp: new Date().toISOString(),
+            metrics: {
+                totalArchives: dbStats.total_archives || 0,
+                failedArchives: dbStats.failed_archives || 0,
+                lastArchive: dbStats.last_archive,
+                totalSizeArchivedMB: dbStats.total_size_mb ? parseFloat(dbStats.total_size_mb.toFixed(2)) : 0,
+                averageArchiveTimeSeconds: dbStats.avg_archive_time_seconds ? parseFloat(dbStats.avg_archive_time_seconds.toFixed(1)) : null
+            },
+            config: {
+                arnsName: config.arns.name,
+                uptimeHours: parseFloat((process.uptime() / 3600).toFixed(2))
+            }
+        });
+    } catch (error) {
+        console.error('[Health] Error generating metrics:', error);
+        res.status(200).json({
+            status: 'ok',
+            timestamp: new Date().toISOString(),
+            error: 'Could not fetch metrics'
+        });
+    }
 });
 
 module.exports = router;

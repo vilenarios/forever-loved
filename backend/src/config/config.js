@@ -38,7 +38,7 @@ const config = {
 
     // Database
     db: {
-        path: path.resolve(__dirname, '../../../archives.db')
+        path: process.env.DB_PATH || path.resolve(__dirname, '../../../archives.db')
     },
 
     // Scraping

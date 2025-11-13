@@ -13,8 +13,18 @@ const archiveRoutes = require('./routes/archive');
 
 const app = express();
 
-// Middleware
-app.use(cors({ origin: config.corsOrigin }));
+// CORS Middleware - Explicit configuration to handle preflight requests
+app.use(cors({
+    origin: config.corsOrigin,
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: false,
+    optionsSuccessStatus: 200
+}));
+
+// Handle preflight requests explicitly
+app.options('*', cors());
+
 app.use(express.json({ limit: '10mb' })); // Limit request body size
 
 // Request logging middleware with IP address
@@ -64,8 +74,8 @@ async function startServer() {
             console.log('=====================================');
             console.log(`Environment: ${config.nodeEnv}`);
             console.log(`Server running on port ${config.port}`);
-            console.log(`API endpoint: http://localhost:${config.port}/archive`);
-            console.log(`Health check: http://localhost:${config.port}/health`);
+            console.log(`Archive endpoint: POST http://localhost:${config.port}/`);
+            console.log(`Health check: GET http://localhost:${config.port}/health`);
             console.log(`CORS origin: ${config.corsOrigin}`);
             console.log(`ArNS name: ${config.arns.name}`);
             console.log('=====================================');

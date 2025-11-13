@@ -9,14 +9,23 @@ const path = require('path');
 function validateEnvironment() {
     const errors = [];
     const warnings = [];
+    const rootDir = path.resolve(__dirname, '../../../');
 
     // Check for Arweave keyfile
-    const rootDir = path.resolve(__dirname, '../../../');
-    const files = fs.readdirSync(rootDir);
-    const keyfile = files.find(f => f.startsWith('arweave-keyfile-') && f.endsWith('.json'));
+    // First check if ARWEAVE_WALLET_PATH is set (common in Docker)
+    const envKeyfilePath = process.env.ARWEAVE_WALLET_PATH;
+    if (envKeyfilePath) {
+        if (!fs.existsSync(envKeyfilePath)) {
+            errors.push(`Arweave keyfile not found at ${envKeyfilePath}`);
+        }
+    } else {
+        // Fall back to scanning for arweave-keyfile-*.json in project root
+        const files = fs.readdirSync(rootDir);
+        const keyfile = files.find(f => f.startsWith('arweave-keyfile-') && f.endsWith('.json'));
 
-    if (!keyfile) {
-        errors.push('Arweave keyfile not found. Place arweave-keyfile-*.json in project root.');
+        if (!keyfile) {
+            errors.push('Arweave keyfile not found. Place arweave-keyfile-*.json in project root or set ARWEAVE_WALLET_PATH.');
+        }
     }
 
     // Check for .env file

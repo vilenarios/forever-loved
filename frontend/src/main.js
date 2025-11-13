@@ -72,7 +72,7 @@ async function archiveProject(url, forceReArchive = false) {
             requestBody.force = true;
         }
 
-        let response = await fetch(`${API_URL}/archive`, {
+        let response = await fetch(API_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ async function archiveProject(url, forceReArchive = false) {
         // Retry once on 502
         if (response.status === 502) {
             await new Promise(resolve => setTimeout(resolve, 1000));
-            response = await fetch(`${API_URL}/archive`, {
+            response = await fetch(API_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(requestBody)

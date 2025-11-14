@@ -13,6 +13,9 @@ const archiveRoutes = require('./routes/archive');
 
 const app = express();
 
+// Trust proxy - needed when behind nginx/reverse proxy for accurate IP detection
+app.set('trust proxy', true);
+
 // CORS Middleware - Explicit configuration to handle preflight requests
 app.use(cors({
     origin: config.corsOrigin,

@@ -46,8 +46,8 @@ const config = {
         mode: process.env.SCRAPING_MODE || 'direct',
         maxRoutes: 50,
         timeouts: {
-            homepage: 1000,  // Minimal wait - networkidle0 handles the real waiting
-            route: 500,      // Minimal wait - networkidle0 handles the real waiting
+            homepage: 500,   // Wait for pages without charts (networkidle2 handles loading)
+            route: 200,      // Wait for routes without charts (networkidle2 handles loading)
             final: 0         // No wait needed after all routes visited
         }
     }

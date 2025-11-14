@@ -128,7 +128,7 @@ async function directScrape(urlToArchive, projectID) {
         // STEP 1: Navigate to homepage and discover all routes
         console.log(`[Direct Scrape] Navigating to homepage ${urlToArchive}`);
         await page.goto(urlToArchive, {
-            waitUntil: 'networkidle0',
+            waitUntil: 'networkidle2',
             timeout: 30000
         });
 
@@ -313,7 +313,7 @@ async function directScrape(urlToArchive, projectID) {
                 console.log(`[Direct Scrape] Visiting route: ${route}`);
 
                 await page.goto(routeUrl, {
-                    waitUntil: 'networkidle0',
+                    waitUntil: 'networkidle2',
                     timeout: 20000
                 });
 

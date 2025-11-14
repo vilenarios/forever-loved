@@ -129,7 +129,7 @@ async function directScrape(urlToArchive, projectID) {
         console.log(`[Direct Scrape] Navigating to homepage ${urlToArchive}`);
         await page.goto(urlToArchive, {
             waitUntil: 'networkidle0',
-            timeout: 90000
+            timeout: 30000
         });
 
         // Scroll to trigger lazy-loaded content on homepage
@@ -154,7 +154,7 @@ async function directScrape(urlToArchive, projectID) {
         let hasChartsOnHomepage = false;
         try {
             console.log(`[Direct Scrape] Waiting for charts to render on homepage...`);
-            await page.waitForSelector('canvas, svg', { timeout: 5000 });
+            await page.waitForSelector('canvas, svg', { timeout: 2000 });
 
             // Debug: Count chart elements
             const chartInfo = await page.evaluate(() => {
@@ -173,7 +173,7 @@ async function directScrape(urlToArchive, projectID) {
 
             hasChartsOnHomepage = true;
             // Give chart library a moment to complete rendering
-            await promiseToWait(1000);
+            await promiseToWait(500);
         } catch (chartWaitErr) {
             console.log(`[Direct Scrape] No charts detected on homepage (this is normal if homepage has no charts)`);
         }
@@ -314,7 +314,7 @@ async function directScrape(urlToArchive, projectID) {
 
                 await page.goto(routeUrl, {
                     waitUntil: 'networkidle0',
-                    timeout: 60000
+                    timeout: 20000
                 });
 
                 // Scroll on this route too
@@ -338,18 +338,18 @@ async function directScrape(urlToArchive, projectID) {
                 // Wait for charts to render (canvas or SVG elements)
                 let hasCharts = false;
                 try {
-                    await page.waitForSelector('canvas, svg', { timeout: 5000 });
+                    await page.waitForSelector('canvas, svg', { timeout: 2000 });
                     hasCharts = true;
 
                     // Wait for network to be idle (all API requests completed)
                     try {
-                        await page.waitForNetworkIdle({ timeout: 10000, idleTime: 2000 });
+                        await page.waitForNetworkIdle({ timeout: 5000, idleTime: 1000 });
                     } catch (networkErr) {
                         // Network idle timeout, proceed anyway
                     }
 
                     // Give chart library additional time to finish animations
-                    await promiseToWait(500);
+                    await promiseToWait(250);
                 } catch (chartWaitErr) {
                     // No charts detected on this route
                 }
